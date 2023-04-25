@@ -1,0 +1,27 @@
+.error-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .error-message{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Inter';
+        user-select: none;
+
+        .number{
+            font-size: 140px;
+            font-weight: 900;
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+
+            display: none;
+        }
+        
+        .message{
+            font-size: 25px;
+        }
+    }
+}
