@@ -12,8 +12,10 @@ import Navbar from './components/Navbar/Navbar'
 
 import './App.scss'
 import { useEffect, useState } from 'react'
+import FullNavbar from './components/FullNavbar/FullNavbar'
 function App() {
   const [isLight, setIsLight] = useState(true)
+  const [isNavbarActive, setIsNavbarActive] = useState(false)
 
   useEffect(() => {
     let theme = localStorage.getItem('theme') || 'light'
@@ -37,8 +39,10 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/*' element={<ErrorPage />} />
           </Routes>
+
+          <FullNavbar isActive={isNavbarActive} setIsActive={setIsNavbarActive} />
         </div>
-        <Navbar />
+        <Navbar setIsActive={setIsNavbarActive} isActive={isNavbarActive} />
 
       </BrowserRouter>
 

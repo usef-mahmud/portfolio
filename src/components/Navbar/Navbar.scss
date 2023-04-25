@@ -8,6 +8,7 @@
         user-select: none;
         cursor: pointer;
         display: none;
+        color: var(--fg-color);
     }
 
     .navbar__links{
@@ -63,12 +64,24 @@
     @media (max-width: 700px) {
         display: flex;
         justify-content: flex-end;
+
         .navbar__links{
             display: none;
         }
 
         .toggle-button{
+            position: relative;
             display: block;
+            &.opened{
+                &::before{
+                    position: absolute;
+                    content: '';
+                    height: 7px;
+                    width: 100%;
+                    background-color: var(--fg-color);
+                    bottom: -8px;
+                }
+            }
         }
     }
 }

@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import './Navbar.scss'
 import { NavLink } from 'react-router-dom'
-const Navbar = () => {
+const Navbar = ({isActive, setIsActive}) => {
+  const [isOpened, setIsOpened] = useState(false)
+
+  useEffect(() => {
+    setIsOpened(isActive)
+  }, [isActive])
   return (
     <div className='navbar'>
-      <div className="toggle-button">
+      <div 
+        className={`toggle-button ${isOpened ? 'opened' : ''}`}
+        onClick={() => {
+          setIsOpened(!isOpened)
+          setIsActive(!isOpened)
+        }}
+      >
         MENU
       </div>
       <div className="navbar__links">
