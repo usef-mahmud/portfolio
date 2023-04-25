@@ -1,3 +1,47 @@
 .navbar{
     padding: 20px 0;
+
+    .navbar__links{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 150px;
+        
+        .link{
+            font-family: 'Inter';
+            font-weight: 800;
+            font-size: 35px;
+
+            a{
+                text-decoration: none;
+                color: var(--fg-color);
+                position: relative;
+
+                &.active{
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        height: 7px;
+                        width: 100%;
+                        background-color: var(--fg-color);
+                        bottom: -8px;
+                    }
+                }
+            }
+
+            &:hover{
+                a::before{
+                    position: absolute;
+                    content: '';
+                    height: 7px;
+                    width: 100%;
+                    background-color: var(--fg-color);
+                    bottom: -8px;
+                }
+            }
+        }
+        .dot{
+            font-size: 50px;
+        }
+    }
 }
