@@ -4,12 +4,23 @@
   --bg-color: #e6e6e6;
   --fg-color: #111110;
 }
+
+*{
+  transition: 0.1s;
+  transition-property: color, background-color;
+}
+
 .App{
   display: flex;
   flex-direction: column;
   height: 100vh;
   padding: 0 50px;
   background-color: var(--bg-color);
+
+  &.dark--theme{
+    --bg-color: #111110;
+    --fg-color: #e6e6e6;
+  }
 
   .main-container{
     height: 100%;

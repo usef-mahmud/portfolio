@@ -11,12 +11,24 @@ import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 
 import './App.scss'
+import { useEffect, useState } from 'react'
 function App() {
+  const [isLight, setIsLight] = useState(true)
+
+  useEffect(() => {
+    let theme = localStorage.getItem('theme') || 'light'
+    if(theme == 'light'){
+      setIsLight(true)
+    }else{
+      setIsLight(false)
+    }
+  }, [])
+
   return (
-    <div className="App">
+    <div className={`App ${isLight ? '' : 'dark--theme'}`}>
       <BrowserRouter>
 
-        <Header />
+        <Header isLight={isLight} setIsLight={setIsLight}/>
         <div className="main-container">
           <Routes>
             <Route path='/' element={<Home />} />

@@ -1,9 +1,23 @@
 import React from 'react'
 
 import './Header.scss'
-const Header = () => {
+const Header = ({ isLight, setIsLight }) => {
   return (
-    <div className='header'>Header</div>
+    <div className='header'>
+      <div className="header__content">
+        <div className="header__name">
+          YOUSEF MAHMOUD
+        </div>
+        <div
+          className="toggle-theme"
+          onClick={() => setIsLight(!isLight)}
+        >
+          {
+            isLight ? 'DARK THEME' : 'LIGHT THEME'
+          }
+        </div>
+      </div>
+    </div>
   )
 }
 
