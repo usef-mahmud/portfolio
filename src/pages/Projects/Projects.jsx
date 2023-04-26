@@ -6,7 +6,7 @@ import './Projects.scss'
 const Projects = () => {
   return (
     <div className='projects-page'>
-      <a href='https://github.com/usef-mahmud' className="all">
+      <a href='https://github.com/usef-mahmud' target='_blank' className="all">
         all projects on github
       </a>
 

@@ -1,5 +1,49 @@
 .home-page{
     height: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+    
+    .container{
+        height: 100%;
+
+        padding: 35px 100px;
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .main-info{
+            font-family: 'Inter';
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-weight: 800;
+            color: var(--fg-color);
+
+            .title{
+                font-size: 85px;
+
+                &:last-child{
+                    font-size: 70px;
+                }
+            }
+
+        }
+
+        .about-info{
+            .about-info__content{
+                display: flex;
+                flex-direction: column;
+                color: var(--fg-color);
+
+                font-family: 'Inter';
+                font-size: 30px;
+                font-weight: 300;
+                line-height: 1.2;
+
+                .info__section-1{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
 }
