@@ -1,0 +1,86 @@
+.contact-page{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 450px;
+
+        .title{
+            font-size: 26px;
+            font-family: 'Inter';
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--fg-color);
+        }
+
+        .form-box{
+            padding: 10px 0;
+            width: 100%;
+            .text-box{
+                position: relative;
+                
+                input,
+                textarea{
+                    width: 100%;
+                    outline: none;
+                    font-family: 'Inter';
+                    font-size: 18px;
+                    border: 4px solid var(--fg-color);
+                    background-color: transparent;
+                    padding: 10px 15px;
+                    font-weight: 500;
+                    color: var(--fg-color);
+                    resize: none;
+                }
+                
+                
+
+                span{
+                    position: absolute;
+                    font-family: 'Inter';
+                    font-size: 18px;
+                    font-weight: 600;
+                    left: 19px;
+                    top: 14px;
+                    user-select: none;
+                    pointer-events: none;
+                    transition: 0s;
+                    color: var(--fg-color);
+                }
+
+                input:focus ~ span,
+                textarea:focus ~ span{
+                    background-color: var(--bg-color);
+                    top: -10px;
+                    left: 4px;
+                    padding: 0 5px;
+                }
+
+                
+            }
+            .send-btn{
+                background-color: var(--fg-color);
+
+                font-family: 'Inter';
+                font-size: 22px;
+                color: var(--bg-color);
+                font-weight: 700;
+                text-align: center;
+                padding: 12px;
+                user-select: none;
+                cursor: pointer;
+
+                &:active{
+                    transform: scale(0.95);
+                    transition: 0s;
+                }
+            }
+        }
+    }
+}
