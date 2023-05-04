@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import mixpanel from 'mixpanel-browser';
-mixpanel.init('16bc8fb38fcc6b260c49a39c91af18a1', {debug: true}); 
 
 import Home from './pages/Home/Home'
 import Projects from './pages/Projects/Projects'
@@ -26,10 +25,7 @@ function App() {
       setIsLight(false)
     }
   }, [])
-  
-  useEffect(() => {
-    mixpanel.track('HomePage')
-  }, [])
+
 
   return (
     <div className={`App ${isLight ? '' : 'dark--theme'}`}>
