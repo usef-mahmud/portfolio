@@ -20,14 +20,14 @@ const Home = () => {
         <div className="about-info">
           <div className="about-info__content">
             <div className="info__section-1">
-              I've worked as front end developer for 3 years <br />
+              I've worked as front end developer for a year <br />
               made projects based on ReactJs <br />
-              also have some experience with back end using PHP
+              and have some experience with back end using NodeJs
             </div>
 
             <div className="info__scetion-2">
-              before that I worked in graphic field for 2 a year, <br />
-              and designed brand identities for clients
+              also I worked in graphic field for 2 a year, <br />
+              designed several brand identities for clients
             </div>
           </div>
         </div>
